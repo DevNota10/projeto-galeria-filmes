@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 10px 2%;
+  position: fixed;
+  z-index: 99;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5725490196);
+  background: #101010;
+}
+header form {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  border: 10px solid #202020;
+  flex-basis: 500px;
+  padding: 5px;
+  gap: 10px;
+}
+header form input {
+  height: 40px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%);
+}
+header #btn-pesquisa {
+  cursor: pointer;
+  height: 40px;
+  padding: 0.5rem;
+  font-size: 19px;
+  border: 0;
+}
+header #btn-pesquisa:hover {
+  transition: 0.5s;
+  background: #ccc;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-45deg, #ccc, #000, #fff);
+}
+section .container {
+  min-width: 100%;
+}
+section .container .galeria {
+  padding: 100px 0px;
+  height: 90vh;
+  overflow-y: auto;
+}
+section .container .galeria::-webkit-scrollbar {
+  width: 5px;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%);
+}
+section .container .galeria::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #fff;
+}
+section .container .galeria .box-film {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+section .container .galeria .box-film .container-img-mv {
+  flex: 1 1 400px;
+}
+section .container .galeria .box-film .container-img-mv h1 {
+  margin: 0 auto;
+  max-width: 400px;
+  font-size: 20px;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%);
+}
+section .container .galeria .box-film .container-img-mv .divMovie {
+  margin: 0 auto;
+  max-width: 400px;
+}
+section .container .galeria .box-film .container-img-mv .divMovie img {
+  width: 100%;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section .container .galeria .box-film .container-img-mv .divMovie img:hover {
+  border: 5px solid #c70d0d;
+}
+section .container .galeria .favoritos {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  padding: 20px 0;
+  gap: 5px;
+}
+section .container .galeria .favoritos label {
+  display: block;
+  width: 100%;
+  color: #ff0000;
+}
+section .container .galeria .favoritos .fa-heart {
+  font-size: 30px;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 1px #ff0000);
+  transition: 0.5s;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  border-radius: 20px;
+  padding: 1rem;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%) !important;
+  color: #eae7e7;
+}
+.logo h3 {
+  color: #0f0;
+  font-size: 30px;
+}
+.logo u {
+  color: #fff;
+  font-size: 25px;
+}
+
+h1 {
+  padding: 1rem;
+  text-align: center;
+  color: #eae7e7;
+}
+
+h2 {
+  color: #fff;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #eae7e7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.container-date {
+  max-width: 700px;
+  padding: 20px;
+  font-size: 25px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  z-index: 99;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 1s;
+  background: #fcfc02;
+  border: 20px solid #101010;
+}
+.container-date h4 {
+  font-family: "Black Ops One", cursive;
+  letter-spacing: 1.5px;
+}
+.container-date h4 strong {
+  padding: 0 5px;
+  color: #fff;
+  font-size: 30px;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%) !important;
+  border-radius: 5px;
+}
+.container-date .close-txt {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #eae4e4;
+  transition: 0.5s;
+}
+.container-date .close-txt:hover {
+  color: #ff0000;
+}
+.container-date .close-txt::after {
+  content: "X";
+}
+
+aside {
+  height: 90vh;
+  min-width: 15%;
+  padding: 10px;
+  position: relative;
+  top: 80px;
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%);
+}
+aside .hide-aside {
+  height: 50px;
+  width: 50px;
+  background: #ccc;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #ff0000;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+aside li {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.8666666667);
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background: #101010;
+}
+aside li:hover {
+  background: #202020;
+}
+aside li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+aside .hot-link {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+}
+aside .hot-link a {
+  color: #ff0000;
+  transition: 0.5s;
+}
+aside .hot-link a:hover {
+  color: yellow;
+}
+
+.pranks {
+  display: none;
+  width: 100%;
+  background: red;
+  padding: 20px;
+  border: 10px solid #000;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: 99;
+  top: 200px;
+}
+.pranks h1 {
+  transition: 0.5;
+  font-size: 5vw;
+  animation: fadeIn 1s ease-in-out infinite;
+  color: yellow;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer {
+  height: 200px;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  border-top: 1px solid rgba(204, 204, 204, 0.5725490196);
+  background: linear-gradient(-45deg, #000 20%, #ff0000, #050505 60%);
+}
+footer .container {
+  padding: 30px 0;
+}
+footer .container div {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 676px) {
+  header .container {
+    display: block;
+    text-align: center;
+  }
+  main {
+    position: relative;
+    top: 50px;
+  }
+  .container-date {
+    width: 100%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-size: 15px;
+  }
+  section {
+    background: #101010;
+    padding: 0 2%;
+    width: 100%;
+  }
+  aside {
+    height: auto !important;
+    display: none;
+  }
+  .galeria {
+    height: 80vh !important;
+  }
+  footer {
+    height: 300px;
+    position: relative;
+    top: 51px;
+    width: 100%;
+  }
+  footer .container {
+    justify-content: center;
+    flex-direction: column !important;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+
+section{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg,#ccc,#000,#fff);
+    .container{
+    min-width: 100%;
+    .galeria{
+        padding: 100px 0px;
+        height: 90vh; 
+        overflow-y: auto;
+            &::-webkit-scrollbar{
+                width: 5px;
+                background: $bgLinearGradient;
+            }
+            &::-webkit-scrollbar-thumb{
+                border-radius: 5px;
+                background: #fff;
+            }
+        .box-film{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+                .container-img-mv{
+                    flex: 1 1 400px;
+                          
+                    h1{
+                        margin: 0 auto;
+                        max-width: 400px;
+                        font-size:20px;
+                        background: $bgLinearGradient;
+                    }
+                    .divMovie{ 
+                        margin: 0 auto;
+                        max-width: 400px;
+                        img{
+                            
+                        width: 100%;
+                        border: 5px solid transparent;
+                        cursor: pointer;
+                        transition: 0.5s;
+                            &:hover{
+                                border: 5px solid #c70d0d
+                            }                  
+                        }
+                    }        
+                }
+                
+                // .container-img-mv:last-child{
+                //     padding-bottom: 150px;
+                // }
+
+            }
+            .favoritos{
+                @include flexCenter(flex,space-around,row);
+                width: 50%;
+                padding: 20px 0;
+                gap: 5px;
+                label{
+                    display: block;
+                    width: 100%;
+                    color: #ff0000;
+                }   
+                .fa-heart{
+                    font-size: 30px;
+                    cursor: pointer;
+                    filter: drop-shadow(5px 5px 1px #ff0000 );
+                    transition: 0.5s;
+                }
+            }
+            // .box-info{
+            //     // background: $bgLinearGradient;
+            //     padding: 10px;
+            
+            //     h2{
+            //         color: $ligthColor;
+            //     }
+            // }
+      } 
+   }
+}
+
+
+
+

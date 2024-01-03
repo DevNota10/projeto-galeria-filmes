@@ -1,0 +1,49 @@
+@mixin flexCenter($display,$juscContant,$direction){
+    display: $display;
+    justify-content: $juscContant;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    padding: 10px 2%;
+    position: fixed;
+    z-index: 99;
+    border-bottom: 1px solid #cccccc92;
+    background: $darckColor;
+
+    form{
+        @include flexCenter(flex,flex-end,row );
+        border: 10px solid $darckColor_2;
+
+        
+        flex-basis: 500px;
+        padding: 5px;
+        gap: 10px;
+    }
+    form input{
+        height: 40px;
+        width: 100%;
+        padding: 5px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        background: $bgLinearGradient;
+        
+    }
+    #btn-pesquisa{
+        cursor: pointer;
+        height: 40px;
+        padding: 0.5rem;
+        font-size: 19px;
+        border: 0;
+        
+        &:hover{
+            transition: 0.5s; 
+            background: #ccc;
+        }
+    }
+}
+

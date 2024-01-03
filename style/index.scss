@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+
+@import './variaveis';
+@import './header';
+@import './section';
+
+body{
+    overflow: hidden;
+    position: relative;
+}
+
+.logo{
+    border-radius: 20px;
+    padding: 1rem;
+    background: $bgLinearGradient !important;
+    color: $ligthColor;
+    h3{
+        color: #0f0;
+        font-size: 30px;
+    }
+    u{
+        color: #fff;
+        font-size: 25px
+    }
+}
+h1{
+    padding: 1rem;
+    text-align: center;
+    color: $ligthColor;
+}
+h2{
+    color: #fff;
+}
+p{
+    font-size: 1.2rem;
+    color:$ligthColor;
+}
+
+ul{
+    list-style-type: none;
+}
+main{
+    @include flexCenter(flex,flex-start,row );
+}
+.container{
+    @include flexCenter(flex,space-between,row );
+    margin: 0 auto;
+    max-width: 1300px ;  
+}
+.container-date{
+    max-width: 700px;
+    padding: 20px;
+    font-size: 25px;
+    
+    position: fixed;
+    top: 30%;
+    left: 50%; 
+    transform: translate(-30%,-50%);
+    z-index: 99;
+    
+    border-radius: 20px;
+    opacity: 0;
+    transition: 1s;
+    background: #fcfc02;
+    border: 20px solid $darckColor;
+
+    h4{
+        font-family: 'Black Ops One', cursive;
+        letter-spacing: 1.5px;
+        strong{
+            padding: 0 5px;
+            color:#fff;
+            font-size: 30px;
+            background: $bgLinearGradient !important;
+            border-radius: 5px;
+
+        }
+    }
+    .close-txt{
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 50%;
+
+        position: absolute;
+        top: -15px;
+        right: -15px;
+
+        background: #eae4e4;
+        transition: 0.5s;
+        
+        &:hover{
+            color: #ff0000;
+        }
+        &::after{
+            content: 'X';
+        }
+      
+    } 
+    
+};
+
+aside{
+    height: 90vh;
+    min-width: 15%;
+    padding: 10px;
+
+    position: relative;
+    top: 80px;
+    background: $bgLinearGradient;
+
+    .hide-aside{
+        height: 50px;
+        width: 50px;
+        
+        background: #ccc;
+        color: #fff;
+        cursor: pointer;
+        border: 2px solid #ff0000;
+
+        position: absolute;
+        right: 0;
+        top: 10px; 
+    }
+ 
+    li{
+       
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid #dddd;
+        text-align: center;
+        transition: 0.5s;
+        cursor: pointer;
+        background: $darckColor;
+
+        &:hover{
+            background: $darckColor_2;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #ccc;
+        }
+    }
+    .hot-link{
+        position: absolute;
+        left: 0;
+        bottom: 80px;
+        
+        a{
+            color: #ff0000;
+            transition: 0.5s;
+            &:hover{
+                color:yellow;
+            }
+        }
+
+        
+
+    }
+}
+.pranks{
+    display: none;
+    width: 100%;
+    background: red;
+    padding: 20px;
+    border: 10px solid #000;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 99;
+    top: 200px;
+  h1{
+    transition: 0.5;
+    font-size: 5vw;
+    animation: fadeIn 1s ease-in-out infinite;
+    color: yellow;
+  }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+footer{
+    
+    height: 200px;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    border-top: 1px solid #cccccc92;
+    background: $bgLinearGradient;
+        .container{
+          
+            padding: 30px 0;
+            div{
+                padding: 1rem;
+                text-align: center;
+                border-radius: 20px;               
+            }
+    }
+}
+
+@media screen and (max-width: 676px) {  
+    header .container{
+        display: block;
+        text-align: center;
+        
+    }
+    main{
+        position: relative;
+        top: 50px;
+    }
+    .container-date{
+        width: 100%;
+        left: 0;
+        transform: translate(0,-50%);
+        font-size: 15px;
+    }
+
+    section{
+    background: $darckColor;
+    padding: 0 2%;
+    width: 100%;
+
+    }
+
+    aside{
+    height: auto !important;
+    display: none;
+    }
+    .galeria{
+        height: 80vh !important;
+    }
+    footer {
+        height: 300px;
+        position: relative;
+        top: 51px;
+        width: 100%;
+        .container{  
+        justify-content: center;
+        flex-direction: column !important;
+
+        }
+    }  
+}
